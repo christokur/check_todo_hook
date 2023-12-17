@@ -2,7 +2,7 @@ from __future__ import annotations
 import argparse
 from typing import Sequence
 
-PATTERS = [
+PATTERNS = [
     b'TODO:',
     b'FIXME:',
 ]
@@ -18,11 +18,11 @@ def main(argv: Sequence[str] | None = None):
     for filename in args.filenames:
         with open(filename, 'rb') as inputfile:
             for i, line in enumerate(inputfile, start=1):
-                for pattern in PATTERS:
+                for pattern in PATTERNS:
                     if pattern in line:
                         comment = line.split(pattern)[1]
                         if LATER_PATTERN not in comment:
-                            print(f'{filename}: {i}: detected {pattern.decode().strip(":")} ')
+                            print(f'{filename}: {i}: {pattern.decode().strip(":")} "{comment.decode().strip()}"')
                             retcode = 1
 
     return retcode
