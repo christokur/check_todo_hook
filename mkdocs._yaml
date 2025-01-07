@@ -1,0 +1,44 @@
+---
+site_name: "check_todo_hook"
+site_description: "check-todo-hook = check_todo_hook.main:main"
+site_url: "https://check_todo_hook.docs.infra-area2.com/"
+repo_url: "https://github.com/SandsB2B/check_todo_hook"
+edit_uri: "edit/master"
+copyright: "(c) 2022 Las Vegas Sands"
+extra:
+  generator: false
+extra_css:
+  - "/docs/css/termynal.css"
+  - "/docs/css/custom.css"
+extra_javascript:
+  - "/docs/js/termynal.js"
+  - "/docs/js/custom.js"
+strict: true
+nav:
+  - Home: "README.md"
+  - Clusters: "/clusters"
+
+theme:
+  name: "material"
+  features:
+  - "search.suggest"
+  - "search.highlight"
+  - "content.tabs.link"
+  icon:
+    repo: "fontawesome/brands/github-alt"
+  custom_dir: "docs/overrides"
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: "default"
+      primary: "lime"
+      accent: "brown"
+      toggle:
+        icon: "material/lightbulb"
+        name: "Switch to light mode"
+    - media: "(prefers-color-scheme: dark)"
+      scheme: "slate"
+      primary: "lime"
+      accent: "yellow"
+      toggle:
+        icon: "material/lightbulb-outline"
+        name: "Switch to dark mode"

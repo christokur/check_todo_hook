@@ -1,0 +1,3 @@
+# An example of how to map a local path to a remote git repo for Terragrunt
+export TERRAFORM_MODULES_AWS_PATH=$(realpath $PWD/../../../../terraform-modules-aws)
+export TERRAGRUNT_OPTIONS="--terragrunt-log-level=info --terragrunt-debug --terragrunt-source-map git::ssh://git@github.com/SandsB2B/terraform-modules-aws=$TERRAFORM_MODULES_AWS_PATH"
